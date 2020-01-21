@@ -664,6 +664,7 @@ i:nth-child(odd) {
 .slide {
     height: 100px;
     width: 250px;
+    margin: 0px 20px;
 }
 /* training */
 section.training{
