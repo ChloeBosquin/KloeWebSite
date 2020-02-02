@@ -142,7 +142,6 @@ nav{
     grid-template-columns: 15% 20% 15% 15% 20% 15%;
 }
 nav#nav{
-    padding: 0.8em 0.2em;
 }
 .burger a {
     justify-content: space-between;
@@ -336,11 +335,13 @@ section {
     svg {
         width: 100%;
     }
+section.page-header{
+    PADDING-TOP: 1EM;
+}
 
-
-@media screen and (min-width:1900px) {
 #profileImage{
-    grid-column: 5/6;
+    grid-column: 4/6;
+    grid-row: 1/3;
     align-self: left;
     align-content: left;
     justify-items: left;
@@ -350,10 +351,12 @@ section {
 
 #handwritingTitle{
     grid-column: 2/5;
+    grid-row: 1/3;
+    width: 70%;
     align-items: center;
     align-self: center;
 }
-}
+
 .page-header h1 {
 
     margin-bottom: -3px;
@@ -395,7 +398,6 @@ main {
 
 .page-header {
     margin: auto;
-    margin-top: 2.5em;
     background: rgb(56, 147, 148);
     background: linear-gradient(90deg, rgba(56, 147, 148, 1) 0%, rgba(108, 196, 196, 1) 35%, rgba(159, 247, 247, 1) 100%);
     width: 100%;
@@ -412,9 +414,11 @@ main {
 
 @media screen and (max-width:460px) {
     #handwritingTitle{
-        grid-column: 1/7;
+        grid-column: 1/8;
+        grid-row: 1/2;
         margin-top: 100px;
-    margin-left: -30px;
+        /* margin-left: -30px; */
+        width: 100%;
     }
     .namemenu{
         grid-column: 1/3;
@@ -448,13 +452,11 @@ main {
       }
     .page-header img {
         width: 12em;
-        margin-bottom: -1.4EM;
     }
     hr {
         width: 2em;
         margin-top: 0.5EM;
         margin-bottom: 1.5em;
-    }
     }
     #profileImage{
     grid-row: 2/3;;
@@ -943,10 +945,11 @@ section.training{
         display: inline;
         left: 0%;
     }
+    .container {
+        width: 100%;
+      }
   }
-  .container {
-    width: 100%;
-  }
+
 /* nutshell */
 section.nutshell{
     background-color: var(--primary-color);
@@ -969,6 +972,16 @@ li{
     display: grid;
     grid-template-rows: auto auto auto;
     grid-template-columns: 15% 20% 15% 15% 20% 15%;
+}
+.item3{
+    grid-column: 2/4;
+    border-radius: 322px;
+    border: grey 2px solid;
+    width: 81%;
+    height: 79%;
+    overflow: hidden;
+    justify-items: center;
+    justify-self: center;
 }
 .containerContact{
     grid-column: 2/3;
@@ -1102,6 +1115,7 @@ input#contactMe{
 /*footer*/
 section.footer{
     background-color: var(--primary-color);
+    MARGIN-TOP: -10px;
 }
 div.copyright{
     grid-column: 2/3;
@@ -1116,7 +1130,11 @@ div.contactfooter{
     grid-column: 5/6;
     font-size: 0.8em;
 }
-div.menu>li{
+.linkfooter{
+    font-size: 1em;
+    font-weight: 100;
+}
+div.menu>li>a{
     font-size: 0.8em;
 }
 .item4{

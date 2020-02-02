@@ -28,13 +28,13 @@
                         <i class="fa fa-bars"></i>
                     </a>
                 </div>
-                <div id="burgerLinks" class="burger burgerdesk">
-                    <a href="#expe">Expériences</a>
-                    <a href="#skills">Compétences</a>
-                    <a href="#training">Formations</a>
-                    <a href="#interest">Qui je suis</a>
-                    <a href="#nutshell">En résumé</a>
-                    <a href="#contact">Contact</a>
+                <div id="burgerLinks" class="burger burgerdesk" style="display: none;">
+                    <a href="#expe" onclick="hideBurger()">Expériences</a>
+                    <a href="#skills" onclick="hideBurger()">Compétences</a>
+                    <a href="#training" onclick="hideBurger()">Formations</a>
+                    <a href="#interest" onclick="hideBurger()">Qui je suis</a>
+                    <a href="#nutshell" onclick="hideBurger()">En résumé</a>
+                    <a href="#contact"onclick="hideBurger()" >Contact</a>
                 </div>
             </div>
         </nav>
@@ -447,7 +447,7 @@
             </div>
         </section>
         <section class="contact" id="contact">
-            <div class="grid10 slidein">
+            <div class="grid10 slidein" style="align-items: center;">
                 <div class="item3" >
                     <img src="images/chloeCartoon.png" alt="" style="width:100%;">
                 </div>
@@ -478,11 +478,11 @@
                 <div class="menu">
                     <P style="font-weight: 600;">Menu</P>
                     <ul>
-                        <li>Qui je suis</li>
-                        <li>Expérience</li>
-                        <li>Compétences</li>
-                        <li>Formation</li>
-                        <li>En résumé</li>
+                        <li> <a class="linkfooter" href="#interest" >Qui je suis</a></li>     
+                        <li> <a class="linkfooter" href="#expe">Expérience</a></li> 
+                        <li> <a class="linkfooter" href="#training">Formation</a></li>    
+                        <li> <a class="linkfooter" href="#skills">Compétences</a></li>                               
+                        <li> <a class="linkfooter" href="#nutshell">En résumé</a></li>           
                     </ul>
                 </div>
                 <div class="contactfooter">
@@ -555,7 +555,6 @@
     });</script>
 <script>
     var burgerLinks = document.getElementById("burgerLinks");
-    console.log(burgerLinks);
     function showBurger() {
         if (burgerLinks.style.display === "none") {
             burgerLinks.style.display = "inline-flex";
@@ -564,7 +563,14 @@
             burgerLinks.style.display = "none";
         }
     }
-
+    function hideBurger() {
+        if (burgerLinks.style.display === "none") {
+            burgerLinks.style.display = "inline-flex";
+        }
+        else{
+            burgerLinks.style.display = "none";
+        }
+    }
 </script>
 <script>
     function openTab(evt, tab) {
