@@ -447,11 +447,60 @@
                 </div>
 
             </div>
-        </section>
-    <body>
+        </section>      
+        <section class="contact" id="contact">
+            <div class="grid10 slidein" style="align-items: center;">
+                <div class="item3" >
+                    <img src="images/chloeCartoon.png" alt="" id="contactImage">
+                </div>
+                <div class="item4">
+                    <h2>Contactez-moi</h2>
+                    <div class="form">
+                        <div></div>
+                        <form>
+                            <form action="#" method="get">
+                                <input type="text" placeholder="Votre nom">
+                                <input type="text" placeholder="L'objet de votre email">
+                                <input type="number" placeholder="Votre numéro de téléphone">
+                                <textarea name="message" id="" cols="30" rows="3" placeholder="Votre message"></textarea>
+                                <input type="submit" value="Envoyer" id="contactMe">
+                            </form>
+                    </div>
+                </div>
 
-        
-    </body>
+
+            </div>
+        </section>
+        <section class="footer">
+            <div class="grid10">
+                <div class="copyright">
+                    <P style="font-weight: 600;">Copyrights</P>
+                    <p>Website designed by Chloé Bosquin</p>
+                </div>
+                <div class="menu">
+                    <P style="font-weight: 600;">Menu</P>
+                    <ul>
+                        <li> <a class="linkfooter" href="#interest" >Qui je suis</a></li>     
+                        <li> <a class="linkfooter" href="#expe">Expérience</a></li> 
+                        <li> <a class="linkfooter" href="#training">Formation</a></li>    
+                        <li> <a class="linkfooter" href="#skills">Compétences</a></li>                               
+                        <li> <a class="linkfooter" href="#nutshell">En résumé</a></li>           
+                    </ul>
+                </div>
+                <div class="contactfooter">
+                    <P style="font-weight: 600;">Contact</P>
+                    <ul>
+                        <li>chloe.bosquin@gmail.com</li>
+                        <li>Linkedin</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+</body>
+</html>
     <script>
     (function ($) {
 
@@ -506,8 +555,18 @@
     });</script>
 <script>
     var burgerLinks = document.getElementById("burgerLinks");
-    console.log(burgerLinks);
+    var navBar = document.getElementById("nav");
     function showBurger() {
+        if (burgerLinks.style.display === "none") {
+            burgerLinks.style.display = "inline-flex";
+            navBar.style.backgroundColor="rgba(255, 255, 255, 0.8)";
+        }
+        else{
+            burgerLinks.style.display = "none";
+            navBar.style.backgroundColor="rgba(255, 255, 255, 1)";
+        }
+    }
+    function hideBurger() {
         if (burgerLinks.style.display === "none") {
             burgerLinks.style.display = "inline-flex";
         }
@@ -515,7 +574,6 @@
             burgerLinks.style.display = "none";
         }
     }
-
 </script>
 <script>
     function openTab(evt, tab) {
