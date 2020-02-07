@@ -89,6 +89,7 @@ h4 {
     font-size: 1em;
     font-weight: 600;
     color: var(--black-light-color);
+    
 }
 
 p {
@@ -481,6 +482,28 @@ main {
     text-align: center;
     margin: auto;
 }
+div.description>h3 {
+    color: var(--dark-color);
+    font-size: 1.1em;
+    font-weight: 600;
+    font-style: italic;
+    margin-top: 40px;
+}
+p.textdescription{
+    padding: 0em 4em 1EM 4EM
+}
+button.tabhobby:focus
+{
+    border: none;
+    outline:none;
+}
+div.description>h4{
+    font-style: italic;
+    font-size: 0.8em;
+    TEXT-ALIGN: RIGHT;
+    font-weight: 500;
+    margin: -15px 210px 10px 0px;
+}
 
 .who-I-am p::first-letter {
     font-weight: bold;
@@ -493,11 +516,67 @@ main {
     margin-bottom: 2em;
     letter-spacing: 0.1rem;
 }
+.buttondescription {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.description {
+    color: var(--black-light-color);
+}
+
+
+.textdescription p {
+    padding: 0em 6em 1EM 6EM;
+}
+
+div.tabhobby:nth-child(odd) {
+    background-color: var(--grey-primary-color);
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 0px 0 rgba(0, 0, 0, 0.19);
+    color: var(--white-color);
+}
+
+div.tabhobby:nth-child(even) {
+    background-color: var(--white-color);
+    border-radius: 0px;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 0px 0 rgba(0, 0, 0, 0.19);
+    border: 1px var(--grey-primary-color) solid;
+    color: var(--black-light-color);
+}
+
+button.tabhobby>img {
+    max-height: 70px;
+}
+
+button.tabhobby>p {
+    margin: 0px;
+    font-weight: 600;
+    padding: 3px 0px 1px 0px;
+}
+.blue{
+    color: var(--dark-color);
+}
+
+button.tabhobby {
+    background-color: #11ffee00;
+    box-shadow: none;
+    border-radius: 0px;
+    margin-top: 0em;
+}
+
+div.tabs {
+    width: 100%;
+}
+
+.border {
+    border: 1px var(--black-light-color) solid;
+}
 
 /*experience*/
 
 main>section.experience {
     background-color: var(--primary-color);
+    background: linear-gradient(90deg, rgba(56, 147, 148, 1) 0%, rgba(108, 196, 196, 1) 35%, rgba(159, 247, 247, 1) 100%);
 }
 
 div.timeline-block {
@@ -605,7 +684,6 @@ div.timeline-block:last-child {
 
 i:nth-child(odd) {
     margin-right: 2px;
-    padding-left: 1em;
 }
 
 /*skillsBar*/
@@ -658,8 +736,8 @@ i:nth-child(odd) {
     transition: all 300ms ease-out;
 }
 
-.date {
-    display: hidden;
+p.date {
+    display: none;
 }
 
 
@@ -757,17 +835,20 @@ i:nth-child(odd) {
 }
 
 .bar.learning::before {
-    width: calc(20% - 10px);
+    width: calc(100% - 10px);
     display: block;
+}
+.bar.learning{
+    margin-top: 1.5em;
 }
 
 .bar.basic::before {
-    width: calc(40% - 10px);
+    width: calc(100% - 10px);
     display: block;
 }
 
 .bar.intermediate::before {
-    width: calc(60% - 10px);
+    width: calc(80% - 10px);
     display: block;
 }
 
@@ -783,12 +864,14 @@ i:nth-child(odd) {
 
 .dynamicBar {
     grid-column: 2/4;
-    padding: 0em 1.5em;
+    padding: 0em 1.5em 0EM 0EM;
     grid-row: 2/3;
+}
+.plist{
+    font-size: 0.9em;
 }
 
 .personnality {
-    padding: 0em 0em 0EM 2EM;
     grid-column: 4/6;
     grid-row: 2/3;
 }
@@ -852,6 +935,10 @@ i:nth-child(odd) {
 
 section.training {
     background-color: var(--primary-color);
+    background: linear-gradient(90deg, rgba(56, 147, 148, 1) 0%, rgba(108, 196, 196, 1) 35%, rgba(159, 247, 247, 1) 100%);
+}
+a.insitute{
+    font-size: 1em;
 }
 
 /* The actual timelinetimeline (the vertical ruler) */
@@ -891,7 +978,7 @@ section.training {
     position: absolute;
     width: 25px;
     height: 25px;
-    right: -9px;
+    right: 0px;
     background-color: white;
     border: 4px solid var(--dark-color);
     top: 15px;
@@ -979,8 +1066,24 @@ ul {
 }
 
 li {
-    margin-top: 0.5em;
+    margin-top: 1em;
 }
+a.buttonBlue{
+    margin: auto;
+    display: inherit;
+    background-color: var(--dark-color);
+    color: white;
+    margin-top: 2.5em;
+    border-radius: 12px;
+    border: none;
+    text-align: center;
+    padding: 10px;
+    letter-spacing: 1px;
+    width: 14rem;
+    font-size: 1em;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 
 /* contact form */
 #contactImage{
@@ -1024,62 +1127,7 @@ li {
     /* box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125); */
 }
 
-.buttondescription {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
-}
 
-.description {
-    color: var(--black-light-color);
-}
-
-div.description>h3 {
-    color: var(--black-light-color);
-}
-
-.textdescription p {
-    padding: 1em 8em;
-}
-
-div.tabhobby:nth-child(odd) {
-    background-color: var(--grey-primary-color);
-    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 0px 0 rgba(0, 0, 0, 0.19);
-    color: var(--white-color);
-}
-
-div.tabhobby:nth-child(even) {
-    background-color: var(--white-color);
-    border-radius: 0px;
-    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 0px 0 rgba(0, 0, 0, 0.19);
-    border: 0.4px var(--grey-primary-color) solid;
-    color: var(--black-light-color);
-}
-
-button.tabhobby>img {
-    max-height: 50px;
-}
-
-button.tabhobby>p {
-    margin: 0px;
-    font-weight: 600;
-    padding: 3px 0px 1px 0px;
-}
-
-button.tabhobby {
-    background-color: #11ffee00;
-    box-shadow: none;
-    width: auto;
-    border-radius: 0px;
-    margin-top: 0em;
-}
-
-div.tabs {
-    width: 100%;
-}
-
-.border {
-    border: 1px var(--black-light-color) solid;
-}
 
 @media only screen and (max-device-width: 480px) {
     .item1 {
@@ -1122,7 +1170,7 @@ form>input, form>textarea {
     /* box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
-input#contactMe {
+input.buttonBlue {
     margin: 1em auto;
     display: inherit;
     background-color: var(--dark-color);
@@ -1142,6 +1190,7 @@ input#contactMe {
 section.footer {
     background-color: var(--primary-color);
     MARGIN-TOP: -10px;
+    background: linear-gradient(90deg, rgba(56, 147, 148, 1) 0%, rgba(108, 196, 196, 1) 35%, rgba(159, 247, 247, 1) 100%);
 }
 
 div.copyright {
